@@ -3,13 +3,13 @@ let movie_id = location.pathname;
 
 console.log( movie_id);
 // fetching movie details 
-fetch('${movie_detail_http}${movie_id}?' + new URLSearchParams({
+fetch(`${movie_detail_http}${movie_id}?` + new URLSearchParams({
     api_key: api_key
 }))
 .then(res => res.json())
 .then(data => {
 
-    // console.log(data);
+    console.log(data);
     setupMovieInfo(data);
 })
 
